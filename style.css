@@ -1,0 +1,232 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    color: #222;
+    background-color: #fff;
+    scroll-behavior: smooth;
+  }
+  
+  /* ===== NAVBAR ===== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #0d47a1;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar .logo span {
+    color: #90caf9;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #90caf9;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+  }
+  
+  /* ===== HERO SECTION ===== */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.8)),
+      url('https://source.unsplash.com/1600x900/?coding,technology') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8em;
+  }
+  
+  .hero-content span {
+    color: #90caf9;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: #90caf9;
+    color: #0d47a1;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background: #fff;
+    color: #0d47a1;
+  }
+  
+  /* ===== SECTION HEADINGS ===== */
+  section {
+    padding: 100px 60px;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2em;
+    color: #0d47a1;
+    margin-bottom: 30px;
+  }
+  
+  /* ===== ABOUT ===== */
+  .about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+  }
+  
+  /* ===== SKILLS ===== */
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .skill-card {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    font-weight: bold;
+    color: #0d47a1;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.05);
+    background: #bbdefb;
+  }
+  
+  /* ===== PROJECTS ===== */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .project-card {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.3s;
+  }
+  
+  .project-card:hover {
+    background: #bbdefb;
+    transform: translateY(-5px);
+  }
+  
+  .project-card h3 {
+    color: #0d47a1;
+    margin-bottom: 10px;
+  }
+  
+  /* ===== EDUCATION ===== */
+  .edu-item {
+    margin-bottom: 30px;
+  }
+  
+  .edu-item ul {
+    list-style: none;
+  }
+  
+  .edu-item li {
+    margin: 5px 0;
+  }
+  
+  /* ===== CONTACT ===== */
+  .contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 2px solid #0d47a1;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+  }
+  
+  .contact-form button {
+    align-self: center;
+    width: 50%;
+  }
+  
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0d47a1;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #0d47a1;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
